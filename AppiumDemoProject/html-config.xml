@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+	<configuration>
+		<!-- report theme -->
+		<!-- standard, dark -->
+		<theme>standard</theme>
+
+		<!-- document encoding -->
+		<!-- defaults to UTF-8 -->
+		<encoding>UTF-8</encoding>
+
+		<!-- enable or disable timeline on dashboard -->
+		<enableTimeline>true</enableTimeline>
+
+		<!-- protocol for script and stylesheets -->
+		<!-- defaults to https -->
+		<protocol>https</protocol>
+
+		<!-- title of the document -->
+		<documentTitle>Extent Framework</documentTitle>
+
+		<!-- report name - displayed at top-nav -->
+		<reportName>Demo Automation Report
+		        <![CDATA[<img src='.//logo.JPG' />]]></reportName>
+
+		<!-- timestamp format -->
+		<timeStampFormat>MMM dd, yyyy HH:mm:ss</timeStampFormat>
+
+		<!-- custom javascript -->
+		<scripts>
+            <![CDATA[
+                $(document).ready(function() {                 
+                 document.getElementsByClassName("label blue darken-3")[1].remove();
+                   var x = document.getElementsByClassName("brand-logo blue darken-3");
+ 				   x[0].innerHTML = "ATTRA";
+ 				    
+                });
+            ]]>
+		</scripts>
+
+		<!-- custom styles -->
+		<styles>
+            <![CDATA[ 
+        .nav-wrapper { background-color:black;  animation-name: anime; 
+        animation-duration: 2s; animation-iteration-count: 3}
+        .report-name { padding-left: 40%;font-size: 145%; }              
+        .report-name > img { alt: "We believe it can be done, so we make it happen";
+         float: right;height: 100%;margin-left: 5px;margin-top: 3px;width: auto; }
+              @keyframes anime {
+				  from {background-color: lightgray;}
+				  to {background-color: black;}
+				}
+                
+            ]]>
+		</styles>
+	</configuration>
+</extentreports>

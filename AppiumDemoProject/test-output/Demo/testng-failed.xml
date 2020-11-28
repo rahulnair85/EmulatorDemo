@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Demo]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="Extent.ListenerClass"/>
+  </listeners>
+  <test thread-count="5" name="SampleAssertTests(failed)">
+    <classes>
+      <class name="Tests.MobileTest">
+        <methods>
+          <include name="installapk"/>
+          <include name="before_class"/>
+          <include name="letsShop"/>
+        </methods>
+      </class> <!-- Tests.MobileTest -->
+    </classes>
+  </test> <!-- SampleAssertTests(failed) -->
+</suite> <!-- Failed suite [Demo] -->

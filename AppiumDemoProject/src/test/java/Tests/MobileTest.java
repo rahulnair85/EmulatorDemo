@@ -125,7 +125,7 @@ public class MobileTest extends library.BaseClass{
 			droiddriver.pressKey(new KeyEvent(AndroidKey.ENTER));		 
 
 			// Chrome session steps
-
+		
 			Assert.assertEquals(isDisplayed(edtName), true);
 			click(edtName); 
 			type(strText, edtName); 

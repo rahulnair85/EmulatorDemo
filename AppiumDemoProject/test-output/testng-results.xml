@@ -1,44 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
+<testng-results ignored="0" total="3" passed="1" failed="1" skipped="1">
   <reporter-output>
     <line>
       <![CDATA[Appium Server Started]]>
     </line>
   </reporter-output>
-  <suite started-at="2020-11-28T15:34:08Z" name="Default suite" finished-at="2020-11-28T15:35:42Z" duration-ms="93848">
+  <suite started-at="2020-11-29T05:12:37Z" name="Default suite" finished-at="2020-11-29T05:14:16Z" duration-ms="98142">
     <groups>
     </groups>
-    <test started-at="2020-11-28T15:34:08Z" name="Default test" finished-at="2020-11-28T15:35:42Z" duration-ms="93848">
+    <test started-at="2020-11-29T05:12:37Z" name="Default test" finished-at="2020-11-29T05:14:16Z" duration-ms="98142">
       <class name="Tests.MobileTest">
-        <test-method is-config="true" signature="before_class()[pri:0, instance:Tests.MobileTest@68c9d179]" started-at="2020-11-28T15:34:08Z" name="before_class" finished-at="2020-11-28T15:34:13Z" duration-ms="5049" status="PASS">
+        <test-method is-config="true" signature="before_class()[pri:0, instance:Tests.MobileTest@68c9d179]" started-at="2020-11-29T05:12:37Z" name="before_class" finished-at="2020-11-29T05:12:43Z" duration-ms="5076" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Appium Server Started]]>
             </line>
           </reporter-output>
         </test-method> <!-- before_class -->
-        <test-method signature="installapk()[pri:0, instance:Tests.MobileTest@68c9d179]" started-at="2020-11-28T15:34:13Z" name="installapk" finished-at="2020-11-28T15:34:46Z" duration-ms="33445" status="PASS">
+        <test-method signature="installapk()[pri:0, instance:Tests.MobileTest@68c9d179]" started-at="2020-11-29T05:12:43Z" name="installapk" finished-at="2020-11-29T05:13:33Z" duration-ms="50463" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- installapk -->
-        <test-method signature="letsShop()[pri:1, instance:Tests.MobileTest@68c9d179]" started-at="2020-11-28T15:34:46Z" name="letsShop" finished-at="2020-11-28T15:35:24Z" depends-on-methods="Tests.MobileTest.installapk" duration-ms="37150" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- letsShop -->
-        <test-method signature="chooseProduct()[pri:2, instance:Tests.MobileTest@68c9d179]" started-at="2020-11-28T15:35:24Z" name="chooseProduct" finished-at="2020-11-28T15:35:39Z" depends-on-methods="Tests.MobileTest.letsShop" duration-ms="15450" status="FAIL">
-          <exception class="java.lang.AssertionError">
+        <test-method signature="letsShop()[pri:1, instance:Tests.MobileTest@68c9d179]" started-at="2020-11-29T05:13:33Z" name="letsShop" finished-at="2020-11-29T05:14:09Z" depends-on-methods="Tests.MobileTest.installapk" duration-ms="35876" status="FAIL">
+          <exception class="java.lang.NullPointerException">
             <message>
-              <![CDATA[expected [PG 4] but found [PG 3]]]>
+              <![CDATA[Cannot invoke "java.lang.CharSequence.length()" because "this.text" is null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [PG 4] but found [PG 3]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:453)
-at org.testng.Assert.assertEquals(Assert.java:463)
-at Tests.MobileTest.chooseProduct(MobileTest.java:163)
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "java.lang.CharSequence.length()" because "this.text" is null
+at java.base/java.util.regex.Matcher.getTextLength(Matcher.java:1770)
+at java.base/java.util.regex.Matcher.reset(Matcher.java:416)
+at java.base/java.util.regex.Matcher.<init>(Matcher.java:253)
+at java.base/java.util.regex.Pattern.matcher(Pattern.java:1134)
+at com.aventstack.extentreports.utils.ExceptionUtil.getExceptionHeadline(ExceptionUtil.java:25)
+at com.aventstack.extentreports.ExtentTest.log(ExtentTest.java:399)
+at com.aventstack.extentreports.ExtentTest.fail(ExtentTest.java:635)
+at com.aventstack.extentreports.ExtentTest.fail(ExtentTest.java:647)
+at Tests.MobileTest.letsShop(MobileTest.java:141)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -66,11 +64,42 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- letsShop -->
+        <test-method signature="chooseProduct()[pri:2, instance:Tests.MobileTest@68c9d179]" started-at="2020-11-29T05:14:13Z" name="chooseProduct" finished-at="2020-11-29T05:14:13Z" depends-on-methods="Tests.MobileTest.letsShop" duration-ms="1" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method MobileTest.chooseProduct()[pri:2, instance:Tests.MobileTest@68c9d179] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method MobileTest.chooseProduct()[pri:2, instance:Tests.MobileTest@68c9d179] depends on not successfully finished methods
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:888)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- chooseProduct -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Tests.MobileTest@68c9d179]" started-at="2020-11-28T15:35:40Z" name="teardown" finished-at="2020-11-28T15:35:42Z" duration-ms="1582" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Tests.MobileTest@68c9d179]" started-at="2020-11-29T05:14:13Z" name="teardown" finished-at="2020-11-29T05:14:16Z" duration-ms="2729" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
